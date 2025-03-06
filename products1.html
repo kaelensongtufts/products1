@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products JSON</title>
+    <style>
+        body {
+            padding: 20px;
+        }
+        #jsonDisplay {
+            background: #c9deff;;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            white-space: pre-wrap;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h2>Products JSON Data:</h2>
+    <div id="jsonDisplay"></div>
+
+    <script>
+        // Global variable
+        var products = [
+            {
+                "name": "Colorful Collage Pants",
+                "description": "Multicolored pants with intricate stitching and patchwork",
+                "price": "$45",
+                "categories": ["clothing", "vintage"]
+            },
+            {
+                "name": "Classic Leather Jacket",
+                "description": "Genuine leather biker jacket",
+                "price": "$120",
+                "categories": ["clothing"]
+            },
+            {
+                "name": "Retro Sunglasses",
+                "description": "Rectangular frame 70s-style sunglasses",
+                "price": "$50",
+                "categories": ["accessories", "vintage"]
+            },
+            {
+                "name": "Canvas Backpack",
+                "description": "Durable and stylish canvas backpack from the 60s",
+                "price": "$75",
+                "categories": ["accessories", "vintage"]
+            },
+            {
+                "name": "Combat-Style Leather Boots",
+                "description": "Brown leather boots with buckle details",
+                "price": "$150",
+                "categories": ["shoes"]
+            },
+            {
+                "name": "Casio Watch",
+                "description": "Silver Casio watch from Japan",
+                "price": "$200",
+                "categories": ["electronics"]
+            },
+            {
+                "name": "Linen Pants",
+                "description": "Comfy, white, linen pants",
+                "price": "$45",
+                "categories": ["clothing"]
+            },
+            {
+                "name": "Digital Camera",
+                "description": "2010 Canon digital camera",
+                "price": "$90",
+                "categories": ["electronics"]
+            }
+        ];
+
+        // Convert JSON to a string
+        var jsonString = JSON.stringify(products, null, 4);
+
+        // Display the JSON string on the page
+        document.getElementById("jsonDisplay").textContent = jsonString;
+    </script>
+
+</body>
+</html>
